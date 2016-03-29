@@ -50,7 +50,7 @@ publish {
     uploadName = 'emailchecker'
     description = 'Email checking library for Android'
     publishVersion = '1.0.0'
-    licences = ['MIT']
+    licences = ['MIT', 'GPL']
     website = 'https://github.com/wordpress-mobile/EmailChecker-Android/'
     dryRun = 'false'
     autoPublish = 'true'

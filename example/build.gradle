@@ -1,3 +1,13 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    ext.kotlin_version = '1.0.1-2'
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -24,6 +34,10 @@ android {
     }
 }
 
+repositories {
+    jcenter()
+}
+
 dependencies {
     testCompile "junit:junit:4.12"
     compile "com.android.support:appcompat-v7:23.2.1"
@@ -31,15 +45,3 @@ dependencies {
     compile project(":emailchecker")
 }
 
-buildscript {
-    ext.kotlin_version = '1.0.1-2'
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-repositories {
-    mavenCentral()
-}

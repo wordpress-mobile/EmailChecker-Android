@@ -1,4 +1,4 @@
-# Email Checker for Android and iOS
+# Email Checker for Android
 
 ## Introduction
 
@@ -15,41 +15,55 @@ If you want to use it in your Android project, your can add it as a
 library in your build.gradle file, don't forget to add the
 wordpress-mobile maven repository. For instance:
 
-    dependencies {
-        // use the latest 0.x version
-        compile 'org.wordpress:emailchecker2:0.+'
-    }
+```gradle
+dependencies {
+    // use the latest version
+    compile 'org.wordpress:emailchecker2:+'
+}
+```
 
-Sample usage:
+Sample usage in Java:
 
-    String emailToCheck = "salut@gmial.com";
-    String suggest = (new EmailChecker()).suggestDomainCorrection(email);
-    if (suggest.compareTo(email) != 0) {
-        Log.v("MYAPP", "did you mean: " + suggest + " ?");
-    }
+```java
+String emailToCheck = "salut@gmial.com";
+String suggestion = EmailCheckerKt.suggestDomainCorrection(emailToCheck);
+if (suggestion.compareTo(email) != 0) {
+    Log.v("MYAPP", "did you mean: " + suggestion + " ?");
+}
+```
+
+Sample usage in Kotlin:
+
+```kotlin
+val emailToCheck = "salut@gmial.com";
+val suggestion = suggestDomainCorrection(emailToCheck)
+if (suggestion != emailToCheck) {
+    Log.v("MYAPP", "did you mean: " + suggestion + " ?");      
+}
+```
 
 ## Hack it
 
 ### Directory structure
 
-    |-- example                  # common C++ native code
-    `-- emailchecker
-        |-- jni                 # android specific C++ native code
-        `-- src                 # android specific Java code
+```
+|-- example                 # Example App
+`-- emailchecker            # EmailChecker Library
+```
 
 ### Build
 
-* For Android
+* Build:
 
-    ```
-    $ ./gradlew build
-    ```
+```
+$ ./gradlew build
+```
 
-## Apps that use this library
+* Publish to bintray:
 
-### [WordPress for Android][1]
-
-![Screenshot from WordPress Android](https://i.cloudup.com/rUxkHNsm5c.png)
+```
+$ ./gradlew build bintrayUpload -PbintrayUser=XXX -PbintrayKey=XXX -PdryRun=false
+```
 
 ## LICENSE
 
@@ -58,7 +72,7 @@ This library is dual licensed unded MIT and GPL v2.
 
 ## CHANGELOG
 
-### 0.1
+### 1.0.0
 
 * Initial release
 

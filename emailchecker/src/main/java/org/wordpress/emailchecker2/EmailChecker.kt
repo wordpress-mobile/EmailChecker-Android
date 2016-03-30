@@ -17,7 +17,7 @@ private val sModel =
                 "yandex.com",
 
                 /* United States ISP domains */
-                "bellsouth.net", "charter.net", "comcast.net", "cox.net", "earthlink.net", "juno.com",
+                "bellsouth.net", "charter.net", "comcast.com", "cox.net", "earthlink.net", "juno.com",
 
                 /* British ISP domains */
                 "btinternet.com", "virginmedia.com", "blueyonder.co.uk", "freeserve.co.uk", "live.co.uk",

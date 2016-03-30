@@ -1,3 +1,5 @@
+@file:JvmName("EmailChecker")
+
 package org.wordpress.emailchecker2
 
 import java.util.*

@@ -49,7 +49,7 @@ publish {
     groupId = 'org.wordpress'
     uploadName = 'emailchecker'
     description = 'Email checking library for Android'
-    publishVersion = '1.0.0'
+    publishVersion = '1.1.0'
     licences = ['MIT', 'GPL']
     website = 'https://github.com/wordpress-mobile/EmailChecker-Android/'
     dryRun = 'false'

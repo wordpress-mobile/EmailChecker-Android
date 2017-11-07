@@ -102,23 +102,23 @@ private fun edits(word: String): List<String> {
     // replaces
     for (i in word.indices) {
         for (c in 0..25) {
-            edits.add(word.substring(0, i) + ('a' + c).toChar() + word.substring(i + 1))
+            edits.add(word.substring(0, i) + ('a' + c) + word.substring(i + 1))
         }
     }
     // inserts
     for (i in word.indices) {
         for (c in 0..25) {
-            edits.add(word.substring(0, i) + ('a' + c).toChar()  + word.substring(i))
+            edits.add(word.substring(0, i) + ('a' + c)  + word.substring(i))
         }
     }
     // last char insert
     for (c in 0..25) {
-        edits.add(word + ('a' + c).toChar())
+        edits.add(word + ('a' + c))
     }
 
     return edits
 }
 
 private fun known(words: List<String>): List<String> {
-    return words.filter { word -> word in sModel }
+    return words.filter { it in sModel }
 }

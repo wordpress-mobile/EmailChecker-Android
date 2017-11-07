@@ -1,8 +1,4 @@
 buildscript {
-    repositories {
-        jcenter()
-    }
-    ext.kotlin_version = '1.0.1-2'
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
@@ -13,13 +9,13 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "24.0.0 rc2"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.3"
 
     defaultConfig {
         applicationId "org.wordpress.emailchecker.example"
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
     }
@@ -34,14 +30,10 @@ android {
     }
 }
 
-repositories {
-    jcenter()
-}
-
 dependencies {
-    testCompile "junit:junit:4.12"
-    compile "com.android.support:appcompat-v7:23.2.1"
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    compile project(":emailchecker")
+    testImplementation "junit:junit:4.12"
+    implementation "com.android.support:appcompat-v7:26.1.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation project(":emailchecker")
 }
 

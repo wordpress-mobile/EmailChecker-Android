@@ -26,7 +26,7 @@ Sample usage in Java:
 
 ```java
 String emailToCheck = "salut@gmial.com";
-String suggestion = EmailCheckerKt.suggestDomainCorrection(emailToCheck);
+String suggestion = EmailChecker.suggestDomainCorrection(emailToCheck);
 if (suggestion.compareTo(email) != 0) {
     Log.v("MYAPP", "did you mean: " + suggestion + " ?");
 }
@@ -71,6 +71,14 @@ This library is dual licensed unded MIT and GPL v2.
 
 
 ## CHANGELOG
+
+### 1.1.1
+
+* Internal changes and updated build files.
+
+### 1.1.0
+
+* Rename the main class name s/EmailCheckerKt/EmailChecker/
 
 ### 1.0.0
 
